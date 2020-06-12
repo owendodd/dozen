@@ -1,0 +1,70 @@
+// Variables
+$base-color: #222;
+$accent-color: #f0ad00;
+$bg-color: #e8e8e8;
+
+// Base
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 26px;
+  background-color: $bg-color;
+  color: $base-color;
+  margin: 30px;
+}
+
+// Type
+h1 {
+  font-size: 1em;
+  font-weight: normal;
+  text-align: center;
+}
+
+p {
+  max-width: 37em;
+  margin: auto;
+  line-height: 1.4em;
+}
+
+// Sections
+header {
+  color: $accent-color;
+}
+
+nav {
+  color: $accent-color;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: calc(100vw - 60px);
+  margin: 30px 0;
+  a {
+    text-decoration: underline;
+    color: $accent-color;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        color: $base-color;
+    }
+  }
+  .nav-link:after{
+      content: ", ";
+  }
+  .nav-link:last-child:after {
+      content: ""
+  } 
+}
+
+.egg-carton {
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+  .egg {
+    margin: 20px;
+  }
+}
